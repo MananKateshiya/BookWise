@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
-import { IBM_Plex_Serif,  Mona_Sans } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import { IBM_Plex_Serif, Mona_Sans } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+import { shadcn } from "@clerk/themes";
 import { cn } from "@/lib/utils";
 
+
+import NavBar from "@/components/NavBar";
 
 const ibmPlexSerif = IBM_Plex_Serif({
   variable: "--font-ibm-plex-serif",
@@ -19,8 +23,7 @@ const monaSans = Mona_Sans({
 
 export const metadata: Metadata = {
   title: "BookWise",
-  description:
-    "Transform your books into interactive AI conversations. Upload PDFs, and chat with your books using voice.",
+  description: "Turn your books into interactive AI conversations.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -33,7 +36,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           monaSans.variable,
         )}
       >
-        {children}
+        <ClerkProvider appearance={{theme: shadcn}}>
+          {/* Header */}
+          <NavBar />
+          {/* Main Body */}
+          {children}
+          {/* End Body */}
+        </ClerkProvider>
       </body>
     </html>
   );
