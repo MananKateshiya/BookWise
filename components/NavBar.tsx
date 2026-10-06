@@ -9,6 +9,7 @@ import {
   SignInButton,
   SignUpButton,
   UserButton,
+  useUser,
 } from "@clerk/nextjs";
 
 import { cn } from "@/lib/utils";
@@ -20,9 +21,10 @@ const NavBar = () => {
   ];
 
   const pathname = usePathname();
+  const { user } = useUser();
 
   return (
-    <header className="w-full fixed z-50 bg-('--bg-primary')">
+    <header className="w-full fixed z-90 bg-('--bg-primary')">
       <div className="wrapper navbar-height py-4 flex justify-between items-center">
         <Link href="/" className="flex gap-0.5 items-center">
           <Image
@@ -55,27 +57,38 @@ const NavBar = () => {
             );
           })}
 
-          <SignedIn>
-            <SignInButton mode="modal">
-              <button
-                type="button"
-                className="nav-link-base text-black hover:opacity-70 cursor-pointer"
-              >
-                Sign in
-              </button>
-            </SignInButton>
-            <SignUpButton mode="modal">
-              <button
-                type="button"
-                className="rounded-xl bg-(--accent-warm) px-4 py-2 text-sm font-semibold text-white shadow-(--shadow-soft) transition hover:bg-(--accent-warm-hover) cursor-pointer"
-              >
-                Sign up
-              </button>
-            </SignUpButton>
-          </SignedIn>
-          <SignedOut>
-            <UserButton />
-          </SignedOut>
+          <div className="flex gap-7.5 items-center">
+            <SignedOut>
+              <SignInButton mode="modal">
+                <button
+                  type="button"
+                  className="nav-link-base text-black hover:opacity-70 cursor-pointer"
+                >
+                  Sign in
+                </button>
+              </SignInButton>
+
+              <SignUpButton mode="modal">
+                <button
+                  type="button"
+                  className="rounded-xl bg-(--accent-warm) px-4 py-2 text-sm font-semibold text-white shadow-(--shadow-soft) transition hover:bg-(--accent-warm-hover) cursor-pointer"
+                >
+                  Sign up
+                </button>
+              </SignUpButton>
+            </SignedOut>
+
+            <SignedIn>
+              <div className="nav-user-link">
+                <UserButton />
+                {user?.firstName && (
+                  <Link href={"/subscriptions"} className="nav-user-name">
+                    {user?.firstName}
+                  </Link>
+                )}
+              </div>
+            </SignedIn>
+          </div>
         </nav>
       </div>
     </header>

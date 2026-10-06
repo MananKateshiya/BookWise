@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-label="Vintage books, globe and lamp">
+  <!-- soft shadow -->
+  <ellipse cx="260" cy="348" rx="170" ry="22" fill="#3d2c14" opacity="0.14"/>
+  <!-- stacked books left -->
+  <g>
+    <rect x="78" y="284" width="130" height="26" rx="4" fill="#5b3a24"/>
+    <rect x="78" y="284" width="14" height="26" rx="4" fill="#422817"/>
+    <rect x="88" y="258" width="126" height="26" rx="4" fill="#6d4a2f"/>
+    <rect x="88" y="258" width="14" height="26" rx="4" fill="#4e3320"/>
+    <path d="M150 258 v26" stroke="#e8c98f" stroke-width="2" opacity="0.7"/>
+    <rect x="120" y="288" width="34" height="6" rx="3" fill="#caa06a" opacity="0.9"/>
+  </g>
+  <!-- globe -->
+  <g>
+    <rect x="212" y="300" width="76" height="12" rx="4" fill="#6b5322"/>
+    <rect x="238" y="236" width="12" height="70" fill="#6b5322"/>
+    <circle cx="200" cy="168" r="78" fill="#d9c9a3" stroke="#7a6234" stroke-width="6"/>
+    <circle cx="200" cy="168" r="78" fill="none" stroke="#4d3f1f" stroke-width="2" opacity="0.4"/>
+    <ellipse cx="200" cy="168" rx="34" ry="78" fill="none" stroke="#8a7440" stroke-width="2.5" opacity="0.8"/>
+    <ellipse cx="200" cy="168" rx="64" ry="78" fill="none" stroke="#8a7440" stroke-width="2" opacity="0.6"/>
+    <path d="M124 150 Q160 138 200 146 Q244 154 276 140" fill="none" stroke="#8a7440" stroke-width="2.5" opacity="0.7"/>
+    <path d="M126 190 Q168 176 208 184 Q246 192 274 178" fill="none" stroke="#8a7440" stroke-width="2.5" opacity="0.7"/>
+    <path d="M150 118 Q170 128 178 152 Q186 176 176 202" fill="#a08c55" opacity="0.55"/>
+    <path d="M218 120 Q238 132 240 154 Q236 176 252 192" fill="#a08c55" opacity="0.55"/>
+    <!-- meridian arm -->
+    <path d="M268 100 A86 86 0 0 1 268 236" fill="none" stroke="#6b5322" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="268" cy="98" r="7" fill="#4d3f1f"/>
+    <circle cx="268" cy="238" r="7" fill="#4d3f1f"/>
+  </g>
+  <!-- lamp -->
+  <g>
+    <rect x="352" y="290" width="44" height="10" rx="4" fill="#6b5322"/>
+    <rect x="368" y="160" width="12" height="134" fill="#7a6234"/>
+    <rect x="368" y="190" width="26" height="10" rx="3" fill="#4d3f1f"/>
+    <rect x="368" y="228" width="26" height="10" rx="3" fill="#4d3f1f"/>
+    <path d="M374 110 L318 158 L364 172 L410 124 Z" fill="#8a6b2f" stroke="#4d3f1f" stroke-width="3" stroke-linejoin="round"/>
+    <ellipse cx="337" cy="159" rx="22" ry="9" fill="#f7e3a8" opacity="0.9"/>
+  </g>
+  <!-- upright books -->
+  <g>
+    <rect x="402" y="200" width="28" height="102" rx="3" fill="#5b3a24"/>
+    <rect x="430" y="210" width="24" height="92" rx="3" fill="#7a4a2b"/>
+    <rect x="454" y="196" width="26" height="106" rx="3" fill="#8a6b4a" transform="rotate(8 467 249)"/>
+    <rect x="406" y="210" width="20" height="6" fill="#e8c98f" opacity="0.8"/>
+  </g>
+  <!-- open book front -->
+  <g>
+    <path d="M150 302 Q200 288 250 304 L250 344 Q200 328 150 342 Z" fill="#fbf2d9" stroke="#5b3a24" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M250 304 Q300 288 350 302 L350 342 Q300 328 250 344 Z" fill="#f6e8c4" stroke="#5b3a24" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M250 304 L250 344" stroke="#5b3a24" stroke-width="3"/>
+    <g stroke="#9b8a6a" stroke-width="2" opacity="0.6">
+      <path d="M168 312 Q200 302 232 310"/>
+      <path d="M168 322 Q200 312 232 320"/>
+      <path d="M268 310 Q300 302 332 312"/>
+      <path d="M268 320 Q300 312 332 322"/>
+    </g>
+    <path d="M132 322 L150 342" stroke="#7a1f1f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
