@@ -4,10 +4,10 @@ import {sampleBooks} from "@/lib/constants";
 
 export default function Home() {
   return (
-    <main className="container mx-auto w-full max-w-7xl">
+    <main className="wrapper container">
       <HeroSection />
 
-      <div className="library-hero-grid">
+      <div className="library-books-grid">
         {sampleBooks.map((book) => (
           <BookCard key={book._id}
           title={book.title}

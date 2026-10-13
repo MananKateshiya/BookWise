@@ -10,7 +10,7 @@ const steps = [
 
 const HeroSection = () => {
   return (
-    <section className="w-full">
+    <section className="wrapper pt-18 mb-10 md:mb-16">
       <div className="library-hero-card">
         <div className="library-hero-content">
           {/* Left: Text & CTA */}
@@ -20,7 +20,7 @@ const HeroSection = () => {
               Convert your books into interactive AI conversations. Listen,
               learn, and discuss your favorite reads.
             </p>
-            <Link href="/book/new" className="library-cta-primary">
+            <Link href="/books/new" className="library-cta-primary">
               <Plus className="size-5" strokeWidth={2.5} />
               Add new book
             </Link>

@@ -95,7 +95,7 @@ export interface VoiceSelectorProps {
     disabled?: boolean;
     className?: string;
     value?: string;
-    onChange: (voiceId: string) => void;
+    onChange: (voiceKey: string) => void;
 }
 
 export interface InputFieldProps<T extends FieldValues> {
