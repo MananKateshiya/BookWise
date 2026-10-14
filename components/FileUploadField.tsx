@@ -45,7 +45,7 @@ const FileUploadField = <T extends FieldValues>({
                     inputRef.current?.click();
                   }
                 }}
-                className={cn("upload-dropzone !rounded-[6px] border-2 border-dashed border-[#d9c9a8]", file && "upload-dropzone-uploaded border-solid border-[#663820]")}
+                className={cn("upload-dropzone rounded-[6px]! border-2 border-dashed border-[#d9c9a8]", file && "upload-dropzone-uploaded border-solid border-[#663820]")}
               >
                 <input
                   ref={inputRef}
@@ -57,8 +57,8 @@ const FileUploadField = <T extends FieldValues>({
                 />
                 {file ? (
                   <div className="flex items-center gap-3 px-4">
-                    <Icon className="upload-dropzone-icon !mb-0 !h-8 !w-8" />
-                    <p className="upload-dropzone-text !text-base max-w-[280px] truncate">{file.name}</p>
+                    <Icon className="upload-dropzone-icon mb-0! h-8! w-8!" />
+                    <p className="upload-dropzone-text text-base! max-w-70 truncate">{file.name}</p>
                     <button
                       type="button"
                       aria-label={`Remove ${file.name}`}
