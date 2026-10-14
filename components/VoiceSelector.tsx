@@ -19,7 +19,7 @@ const VoiceSelector = ({ disabled, className, value, onChange }: VoiceSelectorPr
             <label
               key={key}
               className={cn(
-                "voice-selector-option !justify-start !items-start text-left",
+                "voice-selector-option justify-start! items-start! text-left",
                 selected ? "voice-selector-option-selected" : "voice-selector-option-default",
                 disabled && "voice-selector-option-disabled",
               )}
@@ -46,7 +46,7 @@ const VoiceSelector = ({ disabled, className, value, onChange }: VoiceSelectorPr
 
   return (
     <div className={cn("space-y-5", className)}>
-      <p className="form-label !mb-0">Choose Assistant Voice</p>
+      <p className="form-label mb-0!">Choose Assistant Voice</p>
       {renderGroup("Male Voices", voiceCategories.male as VoiceKey[], "grid grid-cols-1 sm:grid-cols-3 gap-4")}
       {renderGroup("Female Voices", voiceCategories.female as VoiceKey[], "grid grid-cols-1 sm:grid-cols-2 gap-4")}
     </div>
