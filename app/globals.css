@@ -696,6 +696,10 @@
       @apply text-[#8B7355];
     }
   }
+  .upload-dropzone-dragging {
+    @apply bg-[#fff6e5] border-[#212a3b];
+    box-shadow: var(--shadow-soft-md);
+  }
   .upload-dropzone-icon {
     @apply w-[48px] h-[48px] mb-2 text-[#8B7355];
   }

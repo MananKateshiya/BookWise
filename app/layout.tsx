@@ -5,8 +5,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { shadcn } from "@clerk/themes";
 import { cn } from "@/lib/utils";
 
-
 import NavBar from "@/components/NavBar";
+import { Toaster } from "@/components/ui/sonner";
 
 const ibmPlexSerif = IBM_Plex_Serif({
   variable: "--font-ibm-plex-serif",
@@ -36,13 +36,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           monaSans.variable,
         )}
       >
-        <ClerkProvider appearance={{theme: shadcn}}>
+        <ClerkProvider appearance={{ theme: shadcn }}>
           {/* Header */}
           <NavBar />
           {/* Main Body */}
           {children}
           {/* End Body */}
         </ClerkProvider>
+        <Toaster />
       </body>
     </html>
   );
