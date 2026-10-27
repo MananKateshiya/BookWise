@@ -78,9 +78,10 @@ const UploadForm = ({
       }
 
       const uploadedPdfBlob = await upload(fileTitle, pdfFile, {
-        access: "public",
-        handleUploadUrl: "/api/upload",
-        contentType: "application/pdf",
+       access: "private",
+       handleUploadUrl: "/api/upload",
+       contentType: pdfFile.type,
+       multipart: true
       });
 
       let coverUrl: string;
@@ -90,8 +91,9 @@ const UploadForm = ({
         const uploadedCoverBlob = await upload(
           `${fileTitle}_cover.png`,
           coverFile,
+
           {
-            access: "public",
+            access: "private",
             handleUploadUrl: "/api/upload",
             contentType: coverFile.type,
           },
@@ -102,7 +104,7 @@ const UploadForm = ({
         const blob = await response.blob();
 
         const uploadedCoverBlob = await upload(`${fileTitle}_cover.png`, blob, {
-          access: "public",
+          access: "private",
           handleUploadUrl: "/api/upload",
           contentType: blob.type,
         });

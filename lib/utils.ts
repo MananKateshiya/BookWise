@@ -1,7 +1,6 @@
 export { cn } from "cn";
 
 import { TextSegment } from '@/types';
-import { clsx, type ClassValue } from 'clsx';
 import { DEFAULT_VOICE, voiceOptions } from './constants';
 import { PageViewport } from "pdfjs-dist";
 
